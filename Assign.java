@@ -8,7 +8,7 @@ public class Assign extends State {
   }
 
   public void pp(int indent) {
-    for(int i = 0; i < indent; ++i) {
+    for (int i = 0; i < indent; ++i) {
       System.out.print("\t");
     }
     var.display();

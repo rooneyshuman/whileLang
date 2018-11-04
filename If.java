@@ -1,4 +1,4 @@
-public class If extends State{
+public class If extends State {
   private Expr expr;
   private State state1;
   private State state2;
@@ -10,7 +10,7 @@ public class If extends State{
   }
 
   public void pp(int indent) {
-    for(int i = 0; i < indent; ++i)
+    for (int i = 0; i < indent; ++i)
       System.out.print("\t");
     System.out.print("if ");
 
@@ -20,14 +20,14 @@ public class If extends State{
     state1.pp(indent + 1);
     System.out.println();
 
-    for(int i = 0; i < indent; ++i)
+    for (int i = 0; i < indent; ++i)
       System.out.print("\t");
     System.out.println("else");
     state2.pp(indent + 1);
   }
 
   public void interpret() {
-    if(expr.eval() > 0)
+    if (expr.eval() > 0)
       state1.interpret();
     else
       state2.interpret();

@@ -1,21 +1,21 @@
-public class BinOp extends Expr{
+public class BinOp extends Expr {
   private Expr left;
   private Expr right;
   private char op;
 
   //Constructor
-  public BinOp(char op, Expr left, Expr right){
+  public BinOp(char op, Expr left, Expr right) {
     this.op = op;
     this.left = left;
     this.right = right;
   }
 
-  public void display(){
+  public void display() {
     System.out.print("(");
     left.display();
 
     if (op == '*')
-    System.out.print(" * ");
+      System.out.print(" * ");
     else if (op == '+')
       System.out.print(" + ");
     else if (op == '-')
@@ -43,8 +43,7 @@ public class BinOp extends Expr{
         return 1;
       else
         return 0;
-    }
-    else if (op == '>') {
+    } else if (op == '>') {
       if (left.eval() > right.eval())
         return 1;
       else

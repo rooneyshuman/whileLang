@@ -8,7 +8,7 @@ public class While extends State {
   }
 
   public void pp(int indent) {
-    for(int i = 0; i < indent; ++i) {
+    for (int i = 0; i < indent; ++i) {
       System.out.print("\t");
     }
     System.out.print("while ");
@@ -18,7 +18,7 @@ public class While extends State {
   }
 
   public void interpret() {
-    while(expr.eval() > 0){
+    while (expr.eval() > 0) {
       state.interpret();
     }
   }
